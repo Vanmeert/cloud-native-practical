@@ -9,9 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Controller
 public class ShoppingListController {
@@ -28,6 +26,40 @@ public class ShoppingListController {
             return Collections.emptyList();
         }
         return cocktails.subList(0, 1);
+    }
+
+    @GetMapping(value = "/shopping-lists/{uuid}")
+    public @ResponseBody ResponseEntity<ShoppingListResource> getShoppingList(@PathVariable UUID uuid) {
+        List<ShoppingListResource> shoppingLists = getDummyShoppingLists();
+        Optional<ShoppingListResource> list = shoppingLists.stream()
+                .filter(currentList -> uuid.equals(currentList.getShoppingListId()))
+                .findAny();
+
+        return ResponseEntity.of(list);
+    }
+
+    @GetMapping(value = "/shopping-lists")
+    public @ResponseBody List<ShoppingListResource> getShoppingLists() {
+        return getDummyShoppingLists();
+    }
+
+    private List<ShoppingListResource> getDummyShoppingLists() {
+        return Arrays.asList(
+                new ShoppingListResource(UUID.fromString("90689338-499a-4c49-af90-f1e73068ad4f"),
+                "Stephanie's Birthday",
+                Arrays.asList("Tequila",
+                        "Triple sec",
+                        "Lime juice",
+                        "Salt",
+                        "Blue Curacao")),
+                new ShoppingListResource(UUID.fromString("6c7d09c2-8a25-4d54-a979-25ae779d2465"),
+                        "My Birthday",
+                        Arrays.asList("Tequila",
+                                "Triple sec",
+                                "Lime juice",
+                                "Salt",
+                                "Blue Curacao"))
+        );
     }
 
 }
