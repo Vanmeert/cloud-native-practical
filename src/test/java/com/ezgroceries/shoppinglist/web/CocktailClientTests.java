@@ -29,12 +29,12 @@ public class CocktailClientTests {
         String url = "/cocktails?search=Russian";
 
         ResponseEntity<CocktailResource[]> response = restTemplate.getForEntity(url, CocktailResource[].class);
-        assertEquals(response.getStatusCode(), HttpStatus.OK);
-        assertEquals(response.getHeaders().getContentType(), MediaType.APPLICATION_JSON);
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(MediaType.APPLICATION_JSON, response.getHeaders().getContentType());
 
         CocktailResource[] cocktails = response.getBody();
         assertNotNull(cocktails);
-        assertEquals(cocktails.length, 2);
+        assertEquals(2, cocktails.length);
 
         CocktailResource firstCocktail = cocktails[0];
         assertEquals(UUID.fromString("23b3d85a-3928-41c0-a533-6538a71e17c4"), firstCocktail.getCocktailId());
@@ -50,7 +50,6 @@ public class CocktailClientTests {
                 "Lime juice",
                 "Salt"
         );
-        assertEquals(4, ingredients.size());
         assertEquals(expectedIngredients, ingredients);
     }
 }
