@@ -28,4 +28,27 @@ public class CocktailResource {
         this.ingredients = ingredients;
     }
 
+    public UUID getCocktailId() {
+        return cocktailId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getGlass() {
+        return glass;
+    }
+
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public List<String> getIngredients() {
+        return ingredients;
+    }
 }
