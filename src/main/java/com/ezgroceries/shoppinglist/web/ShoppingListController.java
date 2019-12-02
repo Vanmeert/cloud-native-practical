@@ -46,12 +46,12 @@ public class ShoppingListController {
     private List<ShoppingListResource> getDummyShoppingLists() {
         return Arrays.asList(
                 new ShoppingListResource(UUID.fromString("90689338-499a-4c49-af90-f1e73068ad4f"),
-                "Stephanie's Birthday",
-                Arrays.asList("Tequila",
-                        "Triple sec",
-                        "Lime juice",
-                        "Salt",
-                        "Blue Curacao")),
+                        "Stephanie's Birthday",
+                        Arrays.asList("Tequila",
+                                "Triple sec",
+                                "Lime juice",
+                                "Salt",
+                                "Blue Curacao")),
                 new ShoppingListResource(UUID.fromString("6c7d09c2-8a25-4d54-a979-25ae779d2465"),
                         "My Birthday",
                         Arrays.asList("Tequila",
