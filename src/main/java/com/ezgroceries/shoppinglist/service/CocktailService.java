@@ -1,10 +1,10 @@
 package com.ezgroceries.shoppinglist.service;
 
-import com.ezgroceries.shoppinglist.db.CocktailEntity;
+import com.ezgroceries.shoppinglist.db.entities.CocktailEntity;
 import com.ezgroceries.shoppinglist.db.CocktailRepository;
 import com.ezgroceries.shoppinglist.web.cocktails.CocktailResource;
-import com.ezgroceries.shoppinglist.web.cocktails.external.CocktailDBClient;
-import com.ezgroceries.shoppinglist.web.cocktails.external.CocktailDBResponse;
+import com.ezgroceries.shoppinglist.service.external.CocktailDBClient;
+import com.ezgroceries.shoppinglist.service.external.CocktailDBResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.*;

@@ -1,8 +1,8 @@
 package com.ezgroceries.shoppinglist.service;
 
-import com.ezgroceries.shoppinglist.db.CocktailShoppingListEntity;
+import com.ezgroceries.shoppinglist.db.entities.CocktailShoppingListEntity;
 import com.ezgroceries.shoppinglist.db.CocktailShoppingListRepository;
-import com.ezgroceries.shoppinglist.db.ShoppingListEntity;
+import com.ezgroceries.shoppinglist.db.entities.ShoppingListEntity;
 import com.ezgroceries.shoppinglist.db.ShoppingListRepository;
 import com.ezgroceries.shoppinglist.web.shoppinglists.ShoppingListResource;
 import org.springframework.stereotype.Service;

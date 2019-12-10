@@ -1,4 +1,4 @@
-package com.ezgroceries.shoppinglist.db;
+package com.ezgroceries.shoppinglist.db.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

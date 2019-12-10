@@ -1,4 +1,4 @@
-package com.ezgroceries.shoppinglist.db;
+package com.ezgroceries.shoppinglist.db.entities;
 
 import org.springframework.util.CollectionUtils;
 
