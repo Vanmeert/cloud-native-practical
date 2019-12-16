@@ -20,6 +20,12 @@ public class CocktailEntity {
 
     private String name;
 
+    private String glass;
+
+    private String instructions;
+
+    private String image;
+
     @Convert(converter = StringSetConverter.class)
     private Set<String> ingredients;
 
@@ -53,6 +59,30 @@ public class CocktailEntity {
 
     public void setIngredients(Set<String> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    public String getGlass() {
+        return glass;
+    }
+
+    public void setGlass(String glass) {
+        this.glass = glass;
+    }
+
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     @Converter

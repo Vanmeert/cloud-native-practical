@@ -42,6 +42,9 @@ public class CocktailService {
                 newCocktailEntity.setId(UUID.randomUUID());
                 newCocktailEntity.setIdDrink(drinkResource.getIdDrink());
                 newCocktailEntity.setName(drinkResource.getStrDrink());
+                newCocktailEntity.setGlass(drinkResource.getStrGlass());
+                newCocktailEntity.setInstructions(drinkResource.getStrInstructions());
+                newCocktailEntity.setImage(drinkResource.getStrDrinkThumb());
                 newCocktailEntity.setIngredients(new HashSet<>(getIngredients(drinkResource)));
                 cocktailEntity = cocktailRepository.save(newCocktailEntity);
             }

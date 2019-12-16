@@ -36,6 +36,10 @@ public class CocktailDBResponse {
         private String strIngredient14;
         private String strIngredient15;
 
+        public DrinkResource() {
+
+        }
+
         public DrinkResource(
                 String idDrink,
                 String strDrink,
@@ -58,26 +62,26 @@ public class CocktailDBResponse {
                 String strIngredient14,
                 String strIngredient15
         ) {
-            this.idDrink = idDrink;
-            this.strDrink = strDrink;
-            this.strGlass = strGlass;
-            this.strInstructions = strInstructions;
-            this.strDrinkThumb = strDrinkThumb;
-            this.strIngredient1 = strIngredient1;
-            this.strIngredient2 = strIngredient2;
-            this.strIngredient3 = strIngredient3;
-            this.strIngredient4 = strIngredient4;
-            this.strIngredient5 = strIngredient5;
-            this.strIngredient6 = strIngredient6;
-            this.strIngredient7 = strIngredient7;
-            this.strIngredient8 = strIngredient8;
-            this.strIngredient9 = strIngredient9;
-            this.strIngredient10 = strIngredient10;
-            this.strIngredient11 = strIngredient11;
-            this.strIngredient12 = strIngredient12;
-            this.strIngredient13 = strIngredient13;
-            this.strIngredient14 = strIngredient14;
-            this.strIngredient15 = strIngredient15;
+            this.setIdDrink(idDrink);
+            this.setStrDrink(strDrink);
+            this.setStrGlass(strGlass);
+            this.setStrInstructions(strInstructions);
+            this.setStrDrinkThumb(strDrinkThumb);
+            this.setStrIngredient1(strIngredient1);
+            this.setStrIngredient2(strIngredient2);
+            this.setStrIngredient3(strIngredient3);
+            this.setStrIngredient4(strIngredient4);
+            this.setStrIngredient5(strIngredient5);
+            this.setStrIngredient6(strIngredient6);
+            this.setStrIngredient7(strIngredient7);
+            this.setStrIngredient8(strIngredient8);
+            this.setStrIngredient9(strIngredient9);
+            this.setStrIngredient10(strIngredient10);
+            this.setStrIngredient11(strIngredient11);
+            this.setStrIngredient12(strIngredient12);
+            this.setStrIngredient13(strIngredient13);
+            this.setStrIngredient14(strIngredient14);
+            this.setStrIngredient15(strIngredient15);
         }
 
         public String getIdDrink() {
@@ -158,6 +162,86 @@ public class CocktailDBResponse {
 
         public String getStrIngredient15() {
             return strIngredient15;
+        }
+
+        public void setIdDrink(String idDrink) {
+            this.idDrink = idDrink;
+        }
+
+        public void setStrDrink(String strDrink) {
+            this.strDrink = strDrink;
+        }
+
+        public void setStrGlass(String strGlass) {
+            this.strGlass = strGlass;
+        }
+
+        public void setStrInstructions(String strInstructions) {
+            this.strInstructions = strInstructions;
+        }
+
+        public void setStrDrinkThumb(String strDrinkThumb) {
+            this.strDrinkThumb = strDrinkThumb;
+        }
+
+        public void setStrIngredient1(String strIngredient1) {
+            this.strIngredient1 = strIngredient1;
+        }
+
+        public void setStrIngredient2(String strIngredient2) {
+            this.strIngredient2 = strIngredient2;
+        }
+
+        public void setStrIngredient3(String strIngredient3) {
+            this.strIngredient3 = strIngredient3;
+        }
+
+        public void setStrIngredient4(String strIngredient4) {
+            this.strIngredient4 = strIngredient4;
+        }
+
+        public void setStrIngredient5(String strIngredient5) {
+            this.strIngredient5 = strIngredient5;
+        }
+
+        public void setStrIngredient6(String strIngredient6) {
+            this.strIngredient6 = strIngredient6;
+        }
+
+        public void setStrIngredient7(String strIngredient7) {
+            this.strIngredient7 = strIngredient7;
+        }
+
+        public void setStrIngredient8(String strIngredient8) {
+            this.strIngredient8 = strIngredient8;
+        }
+
+        public void setStrIngredient9(String strIngredient9) {
+            this.strIngredient9 = strIngredient9;
+        }
+
+        public void setStrIngredient10(String strIngredient10) {
+            this.strIngredient10 = strIngredient10;
+        }
+
+        public void setStrIngredient11(String strIngredient11) {
+            this.strIngredient11 = strIngredient11;
+        }
+
+        public void setStrIngredient12(String strIngredient12) {
+            this.strIngredient12 = strIngredient12;
+        }
+
+        public void setStrIngredient13(String strIngredient13) {
+            this.strIngredient13 = strIngredient13;
+        }
+
+        public void setStrIngredient14(String strIngredient14) {
+            this.strIngredient14 = strIngredient14;
+        }
+
+        public void setStrIngredient15(String strIngredient15) {
+            this.strIngredient15 = strIngredient15;
         }
     }
 }

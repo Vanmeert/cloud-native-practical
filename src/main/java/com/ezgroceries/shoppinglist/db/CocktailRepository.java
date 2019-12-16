@@ -11,6 +11,8 @@ public interface CocktailRepository extends BaseRepository<CocktailEntity, UUID>
 
     CocktailEntity findByName(String name);
 
+    List<CocktailEntity> findByNameContainingIgnoreCase(String name);
+
     List<CocktailEntity> findByIdDrinkIn(List<String> idDrinks);
 
     List<CocktailEntity> findByIdIn(List<UUID> ids);
