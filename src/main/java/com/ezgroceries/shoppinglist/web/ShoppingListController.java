@@ -2,10 +2,10 @@ package com.ezgroceries.shoppinglist.web;
 
 import com.ezgroceries.shoppinglist.service.CocktailService;
 import com.ezgroceries.shoppinglist.service.ShoppingListService;
-import com.ezgroceries.shoppinglist.web.shoppinglists.CreateShoppingListInput;
-import com.ezgroceries.shoppinglist.web.shoppinglists.CreateShoppingListOutput;
-import com.ezgroceries.shoppinglist.web.shoppinglists.ShoppingListAddCocktailDTO;
-import com.ezgroceries.shoppinglist.web.shoppinglists.ShoppingListResource;
+import com.ezgroceries.shoppinglist.web.dto.shoppinglists.CreateShoppingListInput;
+import com.ezgroceries.shoppinglist.web.dto.shoppinglists.CreateShoppingListOutput;
+import com.ezgroceries.shoppinglist.web.dto.shoppinglists.ShoppingListAddCocktailDTO;
+import com.ezgroceries.shoppinglist.web.dto.shoppinglists.ShoppingListResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,17 +29,19 @@ public class ShoppingListController {
     }
 
     @PostMapping(value = "/shopping-lists")
-    @ResponseStatus(HttpStatus.CREATED)
-    public @ResponseBody CreateShoppingListOutput createShoppingList(@RequestBody CreateShoppingListInput input) {
+    public @ResponseBody ResponseEntity<CreateShoppingListOutput> createShoppingList(@RequestBody CreateShoppingListInput input) {
         ShoppingListResource shoppingListResource = shoppingListService.create(input.getName());
 
         if (shoppingListResource == null) {
-            return null;
+            return ResponseEntity.badRequest().build();
         }
 
-        return new CreateShoppingListOutput(
-                shoppingListResource.getShoppingListId(),
-                shoppingListResource.getName()
+        return new ResponseEntity<>(
+                new CreateShoppingListOutput(
+                    shoppingListResource.getShoppingListId(),
+                    shoppingListResource.getName()
+                ),
+                HttpStatus.CREATED
         );
     }
 

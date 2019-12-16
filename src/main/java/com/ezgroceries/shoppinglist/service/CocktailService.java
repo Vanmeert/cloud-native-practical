@@ -2,7 +2,7 @@ package com.ezgroceries.shoppinglist.service;
 
 import com.ezgroceries.shoppinglist.db.entities.CocktailEntity;
 import com.ezgroceries.shoppinglist.db.CocktailRepository;
-import com.ezgroceries.shoppinglist.web.cocktails.CocktailResource;
+import com.ezgroceries.shoppinglist.web.dto.cocktails.CocktailResource;
 import com.ezgroceries.shoppinglist.service.external.CocktailDBClient;
 import com.ezgroceries.shoppinglist.service.external.CocktailDBResponse;
 import org.springframework.stereotype.Service;

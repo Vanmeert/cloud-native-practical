@@ -11,9 +11,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.ezgroceries.shoppinglist.service.CocktailService;
 import com.ezgroceries.shoppinglist.service.ShoppingListService;
-import com.ezgroceries.shoppinglist.web.shoppinglists.CreateShoppingListInput;
-import com.ezgroceries.shoppinglist.web.shoppinglists.ShoppingListAddCocktailDTO;
-import com.ezgroceries.shoppinglist.web.shoppinglists.ShoppingListResource;
+import com.ezgroceries.shoppinglist.web.dto.shoppinglists.CreateShoppingListInput;
+import com.ezgroceries.shoppinglist.web.dto.shoppinglists.ShoppingListAddCocktailDTO;
+import com.ezgroceries.shoppinglist.web.dto.shoppinglists.ShoppingListResource;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -4,11 +4,12 @@ import com.ezgroceries.shoppinglist.db.entities.CocktailShoppingListEntity;
 import com.ezgroceries.shoppinglist.db.CocktailShoppingListRepository;
 import com.ezgroceries.shoppinglist.db.entities.ShoppingListEntity;
 import com.ezgroceries.shoppinglist.db.ShoppingListRepository;
-import com.ezgroceries.shoppinglist.web.shoppinglists.ShoppingListResource;
+import com.ezgroceries.shoppinglist.web.dto.shoppinglists.ShoppingListResource;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class ShoppingListService {
@@ -68,9 +69,7 @@ public class ShoppingListService {
     }
 
     public List<ShoppingListResource> allShoppingLists() {
-        return shoppingListRepository
-                .findAll()
-                .stream()
+        return StreamSupport.stream(shoppingListRepository.findAll().spliterator(), false)
                 .map(entity -> new ShoppingListResource(
                         entity.getId(),
                         entity.getName(),

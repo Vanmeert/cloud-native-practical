@@ -1,7 +1,7 @@
 package com.ezgroceries.shoppinglist.web;
 
 import com.ezgroceries.shoppinglist.service.CocktailService;
-import com.ezgroceries.shoppinglist.web.cocktails.CocktailResource;
+import com.ezgroceries.shoppinglist.web.dto.cocktails.CocktailResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

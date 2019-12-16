@@ -9,7 +9,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import com.ezgroceries.shoppinglist.service.CocktailService;
-import com.ezgroceries.shoppinglist.web.cocktails.CocktailResource;
+import com.ezgroceries.shoppinglist.web.dto.cocktails.CocktailResource;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
